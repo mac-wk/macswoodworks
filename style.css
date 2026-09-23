@@ -1,0 +1,983 @@
+/* =========================
+   GENERAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #d2a679;
+    color: #333;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    background-color: #3b2416;
+    color: white;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+nav h2 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #d6a15c;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    padding: 70px 5%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #3b2416;
+    font-size: 32px;
+}
+
+/* =========================
+   HOME
+========================= */
+
+#home {
+    max-width: none;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #6b4226;
+    color: white;
+    padding: 80px 5%;
+}
+
+#home h1 {
+    font-size: 52px;
+    max-width: 850px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+#home p {
+    font-size: 20px;
+    max-width: 720px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+a {
+    transition: 0.3s ease;
+}
+
+#home a,
+#catalogue a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #d6a15c;
+    color: #2b1a10;
+    padding: 14px 26px;
+    margin: 6px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#home a:hover,
+#catalogue a:hover {
+    background-color: white;
+    color: #3b2416;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+#about {
+    text-align: center;
+}
+
+#about p {
+    max-width: 850px;
+    margin: 0 auto 15px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+#services {
+    background-color: #eee7dd;
+    max-width: none;
+}
+
+#services h2 {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#services > div {
+    background-color: white;
+    padding: 25px;
+    margin: 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+#services h2 {
+    grid-column: 1 / -1;
+}
+
+#services > div {
+    margin: 0;
+    max-width: none;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media (max-width: 900px) {
+    #services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    #services {
+        grid-template-columns: 1fr;
+    }
+}
+
+#services > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+#services h3 {
+    color: #3b2416;
+    margin-bottom: 12px;
+    font-size: 27px;
+    line-height: 1.3;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+#projects {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#projects h2 {
+    color: #311601;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+#projects h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: #d6a15c;
+    margin: 12px auto 20px;
+    border-radius: 5px;
+}
+
+#projects p {
+    margin-bottom: 15px;
+}
+
+/* =========================
+   CATALOGUE
+========================= */
+
+#catalogue {
+    text-align: center;
+    background-color: #3b2416;
+    color: white;
+    max-width: none;
+}
+
+#catalogue h2 {
+    color: white;
+}
+
+#catalogue p {
+    max-width: 750px;
+    margin: 0 auto 25px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    margin: 10px 0;
+}
+
+#contact a {
+    color: #6b4226;
+    font-weight: bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #24150d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    #home h1 {
+        font-size: 34px;
+    }
+
+    #home p {
+        font-size: 17px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+}
+/* =========================
+   SOCIAL MEDIA BUTTONS
+========================= */
+
+#contact a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px;
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+#contact a:hover {
+    opacity: 0.8;
+}
+/* =========================
+   LOGO
+========================= */
+
+.logo img {
+    width: 80px;
+    height: auto;
+    display: block;
+}
+/* =========================
+   LOGO
+========================= */
+
+.logo img {
+    width: 80px;
+    height: auto;
+    display: block;
+}
+.logo {
+    display: block;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    display: block;
+}
+/* =========================
+   PROFESSIONAL PROJECT GALLERY
+========================= */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.gallery a {
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.gallery img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery a:hover img {
+    transform: scale(1.05);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .gallery img {
+        height: 190px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+        height: 240px;
+    }
+}
+/* =========================
+   IMAGE LIGHTBOX
+========================= */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* =========================
+   CATALOGUE CARDS
+========================= */
+
+.catalogue-grid {
+    max-width: 1200px;
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.catalogue-card {
+    background-color: white;
+    color: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.catalogue-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.catalogue-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.catalogue-card h3 {
+    color: #6b4226;
+    font-size: 22px;
+    margin: 20px 15px 10px;
+}
+
+.catalogue-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 20px 20px;
+}
+
+.catalogue-card a {
+    display: inline-block;
+    background-color: #d6a15c;
+    color: #2b1a10;
+    text-decoration: none;
+    padding: 10px 18px;
+    margin-bottom: 22px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.catalogue-card a:hover {
+    background-color: #3b2416;
+    color: white;
+}
+
+/* Catalogue on tablets and phones */
+@media (max-width: 768px) {
+    .catalogue-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .catalogue-card img {
+        height: 190px;
+    }
+
+    .catalogue-card h3 {
+        font-size: 19px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .catalogue-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .catalogue-card img {
+        height: 230px;
+    }
+}
+/* HOME BADGE */
+
+.home-badge {
+    display: inline-block;
+    background-color: #d6a15c;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Mobile adjustment */
+@media (max-width: 480px) {
+    .home-badge {
+        font-size: 10px;
+        padding: 7px 10px;
+        letter-spacing: 0.5px;
+    }
+}
+/* =========================
+   WHY CHOOSE US SECTION
+========================= */
+
+#why-us {
+    background-color: #f5f1eb;
+    text-align: center;
+    max-width: none;
+}
+
+#why-us h2 {
+    margin-bottom: 35px;
+}
+
+.why-us-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.why-us-card {
+    background-color: white;
+    padding: 25px 18px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.why-us-card:hover {
+    transform: translateY(-5px);
+}
+
+.why-us-card h3 {
+    color: #6b4226;
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.why-us-card p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Tablets and phones */
+@media (max-width: 900px) {
+    .why-us-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .why-us-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* PROJECTS INTRODUCTION */
+
+.projects-intro {
+    max-width: 750px;
+    margin: -10px auto 30px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #ffffff;
+}
+.about-tagline {
+    margin-top: 25px !important;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+/* BUSINESS NAME BESIDE LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    display: block;
+}
+
+.logo span {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+/* SERVICES TEXT COLOR */
+
+#services > div h3,
+#services > div p {
+    color: #3b2416;
+}
+/* =========================
+   PROJECT IMAGE POLISH
+========================= */
+
+.gallery a {
+    position: relative;
+    border: 3px solid white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.gallery img {
+    transition: transform 0.4s ease;
+}
+
+.gallery a:hover img {
+    transform: scale(1.04);
+}
+ /* =========================
+    PROFESSIONAL CONTACT SECTION
+ ========================= */
+
+#contact {
+    background-color: #f5f1eb;
+    max-width: none;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#contact h2 {
+    color: #3b2416;
+    font-size: 38px;
+    margin-bottom: 35px;
+}
+
+#contact p {
+    max-width: 700px;
+    margin: 12px auto;
+    padding: 12px 18px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+#contact a {
+    color: #6b4226;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: #d6a15c;
+}
+ /* Larger Contact Text */
+
+#contact p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+#contact a {
+    font-size: 18px;
+}
+
+#contact p strong {
+    font-size: 19px;
+}
+
+@media (max-width: 480px) {
+    #contact p {
+        font-size: 17px;
+    }
+
+    #contact a {
+        font-size: 17px;
+    }
+
+    #contact p strong {
+        font-size: 18px;
+    }
+}
+/* =========================
+   PROFESSIONAL FOOTER
+========================= */
+
+footer {
+    background-color: #24150d;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+.footer-tagline {
+    color: #d6a15c;
+    font-size: 16px !important;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+ /* =========================
+    MOBILE HEADER IMPROVEMENT
+ ========================= */
+
+@media (max-width: 768px) {
+
+    .logo {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 65px;
+    }
+
+    .logo span {
+        font-size: 22px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+        padding: 5px;
+    }
+}
+ /* =========================
+    PROFESSIONAL ABOUT SECTION
+ ========================= */
+
+#about {
+    background-color: #fffaf4;
+    max-width: none;
+    text-align: center;
+    padding: 80px 5%;
+}
+
+#about h2 {
+    font-size: 38px;
+    color: #3b2416;
+    margin-bottom: 25px;
+}
+
+#about p {
+    max-width: 850px;
+    margin: 0 auto 18px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.about-tagline {
+    font-size: 24px !important;
+    color: #6b4226 !important;
+    margin-top: 30px !important;
+}
+#about p {
+    color: #3b2416;
+}
+.why-us-card h3,
+.why-us-card p {
+    color: #3b2416;
+}
+.why-us-card h3 {
+    font-size: 27px;
+    line-height: 1.3;
+}
+/* =========================
+   OVERALL PAGE SPACING
+========================= */
+
+section {
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+section h2 {
+    margin-bottom: 35px;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    section h2 {
+        margin-bottom: 28px;
+    }
+}
+/* =========================
+   PROFESSIONAL NAVIGATION
+========================= */
+
+nav ul li a {
+    padding: 8px 5px;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d6a15c;
+}
+
+@media (max-width: 768px) {
+    nav ul li a {
+        font-size: 14px;
+        padding: 6px 4px;
+    }
+}
+/* =========================
+   FLOATING WHATSAPP BUTTON
+========================= */
+
+.floating-whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2000;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 480px) {
+    .floating-whatsapp {
+        right: 15px;
+        bottom: 15px;
+        padding: 12px 17px;
+        font-size: 14px;
+    }
+}
+/* =========================
+   CONTACT ACTION BUTTONS
+========================= */
+
+#contact p a {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    background-color: #d6a15c;
+    color: #2b1a10;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#contact p a:hover {
+    background-color: #3b2416;
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    #contact p a {
+        margin-top: 6px;
+        margin-left: 0;
+        font-size: 16px;
+    }
+}
+/* =========================
+   SERVICES INTRO
+========================= */
+
+.services-intro {
+    grid-column: 1 / -1;
+    max-width: 750px;
+    margin: -10px auto 25px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #3b2416;
+}
+
+@media (max-width: 480px) {
+    .services-intro {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+}
